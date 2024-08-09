@@ -30,3 +30,9 @@ def adicionar_produto(lista_produtos):
 
     produto = Produto(nome,preco,quantidade)
     lista_produtos.append(produto)
+
+def adicionar_produto_carrinho(lista_produtos,carrinho,nome_produto):
+    for produto in lista_produtos:
+        if produto.nome == nome_produto:
+            carrinho.append(produto.nome)
+   
