@@ -30,3 +30,13 @@ def adicionar_produto(lista_produtos):
 
     produto = Produto(nome,preco,quantidade)
     lista_produtos.append(produto)
+
+def excluir_produto(lista_produtos):
+    produto_nome = input("Qual produto deseja excluir: ")
+    for item in lista_produtos:
+        if item.nome == produto_nome:
+            lista_produtos.remove(produto_nome)
+            print("Produto excluido!")
+        if item.nome != produto_nome:
+            print("Nome não encontrado!")
+            
