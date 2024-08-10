@@ -31,7 +31,6 @@ def adicionar_produto(lista_produtos):
     produto = Produto(nome,preco,quantidade)
     lista_produtos.append(produto)
 
-<<<<<<< HEAD
 def excluir_produto(lista_produtos):
     produto_nome = input("Qual produto deseja excluir: ")
     for item in lista_produtos:
@@ -41,10 +40,3 @@ def excluir_produto(lista_produtos):
         if item.nome != produto_nome:
             print("Nome não encontrado!")
             
-=======
-def adicionar_produto_carrinho(lista_produtos,carrinho,nome_produto):
-    for produto in lista_produtos:
-        if produto.nome == nome_produto:
-            carrinho.append(produto.nome)
-   
->>>>>>> 79ba862db2cdc2fad20ab6f0fc782016b12c03ac

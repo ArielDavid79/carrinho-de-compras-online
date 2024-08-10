@@ -7,33 +7,23 @@ inicio(lista_produtos)
 carrinho = []
 
 while True:
-    primeiro_menu()
-<<<<<<< HEAD
-    op = int(input())
-    #OP ESCOLHIDA IRA ABRIR PAG CLIENTE
-=======
-    op = int(input("Selecione uma opção: "))
 
->>>>>>> 79ba862db2cdc2fad20ab6f0fc782016b12c03ac
+    primeiro_menu()
+    op = int(input())
+
     if op == 1:
         print("----- OLÁ CLIENTE ------")
-        #CRIAR SUB-MENU PARA ABA E MOSTAR ACOES DO CLIENTE
+
         print("Oque deseja realizar?")
-        
-        #menu-cliente e fazer as condicoes
-        imprimir_produtos(lista_produtos)
-<<<<<<< HEAD
-    
-    #OP ESCOLHIDA IRA ABRIR PAG ADM
-=======
         menu_cliente()
-        op = int(input("Selecione uma opção: "))
+        op = int(input("Qual gostaria: "))
+        
         if op == 1:
-            nome_produto = input("Digite o nome do produto: ")
-            # quantidade = input("Digite a quantidade do produto: ")
-            adicionar_produto_carrinho(lista_produtos,carrinho,nome_produto)
-            print(carrinho)
->>>>>>> 79ba862db2cdc2fad20ab6f0fc782016b12c03ac
+            imprimir_produtos(lista_produtos)
+
+        elif op == 2:
+            pass#selecionar produto
+    
     elif op == 2:
         print("----- OLÁ ADMINISTRADOR ------")
         
