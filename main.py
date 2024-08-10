@@ -38,4 +38,4 @@ while True:
             pass
         
         if op == 3:
-            excluir_produto(lista_produtos)
+            excluir_produto(lista_produtos)#esta dando erro
