@@ -35,7 +35,7 @@ while True:
             adicionar_produto(lista_produtos)
         
         if op == 2:
-            pass
+            pass#editar produto
         
         if op == 3:
             excluir_produto(lista_produtos)#esta dando erro
