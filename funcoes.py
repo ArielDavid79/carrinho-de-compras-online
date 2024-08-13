@@ -40,3 +40,22 @@ def excluir_produto(lista_produtos):
         if item.nome != produto_nome:
             print("Nome não encontrado!")
             
+def adicionar_produto_carrinho(lista_produtos,carrinho):
+        nome = input("Digite o nome do produto: ")
+        for item in lista_produtos:
+            if item.nome == nome:
+                quantidade = input("Digite a quantidade do produto: ")
+                produto = Carrinho(nome,item.preco,quantidade)            
+                carrinho.append(produto)
+                
+def remover_produto_carrinho(carrinho):
+    nome = input("Digite o nome do produto que deseja remover: ")
+    carrinho.remove(nome)
+
+def ver_produtos_carrinho(carrinho):
+    for item in carrinho:
+        print(f"\nNome: {item.nome}")
+        print(f"Valor: {item.preco}")
+        print(f"Quantidade: {item.quantidade}\n")
+
+           

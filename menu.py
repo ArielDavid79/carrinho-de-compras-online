@@ -12,4 +12,8 @@ def menu_adm():
     print("1 - Adiconar produto\n2 - Editar produto\n3 - Excluir produto")
 
 def menu_cliente():
-    print("1 - Ver produtos\n2 - Selecionar produtos\n")
+    print("1 - Ver produtos\n2 - Carrinho\n")
+
+
+def menu_carrinho():
+    print("1 - Ver carrinho\n2 - Adicionar produtos\n3 - Remover produtos")
