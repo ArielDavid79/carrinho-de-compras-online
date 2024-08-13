@@ -2,48 +2,77 @@ from classes import *
 from menu import *
 from funcoes import*
 
+
 lista_produtos=[]
 inicio(lista_produtos)
 carrinho = []
 
-close = True
-
 def fluxo_principal():
+    close = True
     while close:
         primeiro_menu()
-        op = int(input())
-
+        op = int(input("Insira uma opção: "))
         if op == 1:
-            print("----- OLÁ CLIENTE ------")
-            print("Oque deseja realizar?")
-            menu_cliente()
-            op = int(input("Qual gostaria: "))
-            
-            if op == 1:
-                imprimir_produtos(lista_produtos)
-
-            elif op == 2:
-                menu_carrinho()
-                op = int(input("Qual gostaria: "))
-                if op == 1:
-                    ver_produtos_carrinho(carrinho)
-                elif op == 2:
-                    adicionar_produto_carrinho(lista_produtos,carrinho)
-                elif op == 3:
-                    remover_produto_carrinho(carrinho)
-        
+            fluxo_cliente()
         elif op == 2:
-            print("----- OLÁ ADMINISTRADOR ------")
-            
-            print("Oque deseja realizar?")
-            menu_adm()
-            op = int(input("Qual gostaria: "))
-            
+            fluxo_adm()
+        elif op == 0:
+            close = False
+        else:
+            print("Opção não encontrada! ")
+
+def fluxo_cliente():
+    close = True
+    while close:
+        menu_cliente()
+        op = int(input("Insira uma opção: "))
+        if op == 1:
+            ver_produtos(lista_produtos)
+        elif op == 2:
+            fluxo_cliente_op2()
+        elif op == 0:
+            close = False
+        else:
+            print("Opção não encontrada! ")
+
+def fluxo_cliente_op2():
+        close = True
+        while close:
+            menu_carrinho()
+            op = int(input("Insira uma opção: "))
             if op == 1:
-                adicionar_produto(lista_produtos)
-            
-            if op == 2:
-                pass
-            
-            if op == 3:
-                excluir_produto(lista_produtos)#esta dando erro
+                ver_produtos_carrinho(carrinho)
+            elif op == 2:
+                adicionar_produto_carrinho(lista_produtos,carrinho)
+                sub_menu_adicionar_produto_carrinho()
+                op = int(input("Insira uma opção: "))
+                while op == 1:
+                    adicionar_produto_carrinho(lista_produtos,carrinho)
+                    sub_menu_adicionar_produto_carrinho()
+                    op = int(input("Insira uma opção: "))
+                if op == 0:
+                    close = False
+            elif op == 3:
+                remover_produto_carrinho(carrinho)
+            elif op == 0:
+                close = False
+            else:
+                print("Opção não encontrada! ")
+
+def fluxo_adm():
+    close = True
+    while close: 
+        menu_adm()
+        op = int(input("Insira uma opção: "))     
+        if op == 1:
+            adicionar_produto(lista_produtos)  
+        elif op == 2:
+            editar_produto(lista_produtos)
+        elif op == 3:
+                excluir_produto(lista_produtos)
+        elif op == 4:
+            ver_produtos(lista_produtos)
+        elif op == 0:
+            close = False
+
+fluxo_principal()

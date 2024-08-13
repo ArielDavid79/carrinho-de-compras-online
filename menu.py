@@ -1,19 +1,19 @@
 def primeiro_menu():
-    print("1 - Cliente\n2 - Administrador\n")
-
-def imprimir_produtos(lista_produtos):
-    for item in lista_produtos:
-        print(f"\nNome: {item.nome}")
-        print(f"Valor: {item.preco}")
-        print(f"Quantidade: {item.quantidade}\n")
-
+    print("""\n----- LOGIN ------
+1 - Cliente\n2 - Administrador\n0 - Sair\n""")
 
 def menu_adm():
-    print("1 - Adiconar produto\n2 - Editar produto\n3 - Excluir produto")
+    print("""\n----- OLÁ ADMINISTRADOR ------
+1 - Adicionar produto\n2 - Editar produto\n3 - Excluir produto\n4 - Ver produtos\n0 - Voltar\n""")
 
 def menu_cliente():
-    print("1 - Ver produtos\n2 - Carrinho\n")
-
+    print("""\n----- OLÁ CLIENTE ------
+1 - Ver produtos\n2 - Meu carrinho\n0 - Voltar\n""")
 
 def menu_carrinho():
-    print("1 - Ver carrinho\n2 - Adicionar produtos\n3 - Remover produtos")
+    print("""\n----- OPÇÕES CARRINHO ------
+1 - Ver carrinho\n2 - Adicionar produtos\n3 - Remover produtos\n0 - Voltar\n""")
+    
+def sub_menu_adicionar_produto_carrinho():
+    print("""\n----- OPÇÕES ------
+1 - Adicionar mais produtos\n0 - Voltar\n""")
