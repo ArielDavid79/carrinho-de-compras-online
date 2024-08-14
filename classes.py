@@ -14,4 +14,7 @@ class Produto():
         self.preco=preco
         self.quantidade=quantidade
 
-        
+class Carrinho(Produto):
+    def __init__(self, nome, preco, quantidade):
+        super().__init__(nome, preco, quantidade)
+
