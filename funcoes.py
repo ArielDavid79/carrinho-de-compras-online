@@ -45,7 +45,7 @@ def excluir_produto(lista_produtos):
     #     print("Código não encontrado! ")
 
 def editar_produto(lista_produto):
-    codigo = int(input("Digite o código do produto que deseja remover: "))  
+    codigo = int(input("Digite o código do produto que deseja editar: "))  
     print(f"Editar Produto CÓDIGO: {codigo}")
     nome = input(f"Novo nome do produto: ")
     preco = input(f"Novo preço do produto: ")
